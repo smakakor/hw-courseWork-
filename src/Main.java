@@ -66,7 +66,4 @@ public class Main {
         int meanSalary = sumSalary() / totalEmployee;
         return meanSalary;
     }
-
-
-
 }

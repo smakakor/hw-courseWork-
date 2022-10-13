@@ -41,4 +41,5 @@ public class Employee {
     public String toString() {
         return "Сотрудник: " + fullName + "; Отдел: " + dapartment + "; Заплата: " + salary;
     }
+
 }
