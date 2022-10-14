@@ -9,16 +9,14 @@ public class Main {
         employees [2] = new Employee("Галямов Дамир Дамирович", 2, 3300);
         employees [3] = new Employee("Байбеков Сергей Александрович", 1, 4400);
         employees [4] = new Employee("Емельянов Георгий Борисович", 4, 2200);
-
-        for (Employee employee : employees) {
-            if (employee != null) {
-                System.out.println(employee);
-            }
-        }
+        printEmployeeAll();
+        System.out.println();
+        printEmployee();
+        System.out.println();
         System.out.println("Общая сумма ЗП: " + sumSalary());
         System.out.println("Максимальная ЗП у: \n" + maxSalary());
         System.out.println("Минимальная ЗП у: \n" + minSalary());
-        System.out.println("Средния ЗП: "+meanSalary());
+        System.out.println("Средния ЗП: " + meanSalary());
 
     }
 
@@ -44,7 +42,7 @@ public class Main {
         }
         return targetEmployee;
     }
-    private  static Employee minSalary(){
+    private static Employee minSalary(){
         int min = Integer.MAX_VALUE;
         Employee targetEmployee = null;
         for (Employee employee : employees) {
@@ -55,7 +53,7 @@ public class Main {
         }
         return targetEmployee;
     }
-    private static int meanSalary(){
+    private static float meanSalary(){
         int totalEmployee = 0;
         for (Employee employee : employees) {
             if (employee != null) {
@@ -63,7 +61,22 @@ public class Main {
 
             }
         }
-        int meanSalary = sumSalary() / totalEmployee;
+        float meanSalary = sumSalary() / totalEmployee;
         return meanSalary;
+    }
+
+    public static void printEmployeeAll() {
+        for (Employee employee : employees) {
+            if (employee != null) {
+                System.out.println(employee);
+            }
+        }
+    }
+    public static void printEmployee() {
+        for (Employee employee : employees) {
+            if (employee != null) {
+                System.out.println(employee.getFullName());
+            }
+        }
     }
 }
