@@ -4,11 +4,11 @@ public class Main {
 
 
     public static void main(String[] args) {
-        employees [0] = new Employee("Иванов Иван Иванович", 5, 500);
-        employees [1] = new Employee("Шакиров Амир Ильдарович", 3, 1100);
-        employees [2] = new Employee("Галямов Дамир Дамирович", 2, 3300);
-        employees [3] = new Employee("Байбеков Сергей Александрович", 1, 4400);
-        employees [4] = new Employee("Емельянов Георгий Борисович", 4, 2200);
+        employees [0] = new Employee("Иванов Иван Иванович", 5, 13);
+        employees [1] = new Employee("Шакиров Амир Ильдарович", 3, 0);
+        employees [2] = new Employee("Галямов Дамир Дамирович", 2, 0);
+        employees [3] = new Employee("Байбеков Сергей Александрович", 1, 0);
+        employees [4] = new Employee("Емельянов Георгий Борисович", 4, 1);
         printEmployeeAll();
         System.out.println();
         printEmployee();
@@ -61,18 +61,18 @@ public class Main {
 
             }
         }
-        float meanSalary = sumSalary() / totalEmployee;
+        float meanSalary = (float) sumSalary() / totalEmployee;
         return meanSalary;
     }
 
-    public static void printEmployeeAll() {
+    private static void printEmployeeAll() {
         for (Employee employee : employees) {
             if (employee != null) {
                 System.out.println(employee);
             }
         }
     }
-    public static void printEmployee() {
+    private static void printEmployee() {
         for (Employee employee : employees) {
             if (employee != null) {
                 System.out.println(employee.getFullName());
